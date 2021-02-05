@@ -171,7 +171,7 @@ window.onload = () => {
         document.querySelector("#slidesCount").innerHTML = Math.floor(Math.random() * 5) + 10;
     })
 
-    document.querySelector("#roundDetials #startButton").addEventListener('click', ()=> {
+    document.querySelector("#roundScreen #startButton").addEventListener('click', ()=> {
         document.querySelector("#roundDetails").style.display = "none";
         document.querySelector("#contestantsScreen").style.display = "flex"
     })
