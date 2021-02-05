@@ -35,6 +35,7 @@ html, body {
   border: none;
   margin-bottom: 50px;
   margin-top: 50px;
+  color: white;
 }
 
 #loginScreen input::-webkit-input-placeholder {
@@ -335,7 +336,6 @@ html, body {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 75%;
   height: 20px;
 }
 
@@ -345,7 +345,6 @@ html, body {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 25%;
   height: 20px;
 }
 
@@ -364,5 +363,9 @@ html, body {
   line-height: 50px;
   text-align: center;
   background-color: #212121;
+}
+
+.blue {
+  background-color: #2D9CDB;
 }
 /*# sourceMappingURL=index.css.map */

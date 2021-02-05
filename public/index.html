@@ -14,7 +14,8 @@
         <div>
             <img id="logo" src="">
             <h1>Enter your room code below!</h1>
-            <input id="roomCode" type="text" placeholder="Enter your room code here..." />
+            <input id="userName" type="text" placeholder="Enter your name here..." /><br/>
+            <input id="roomCode" type="text" placeholder="Enter your room code here..." style="margin-top:-10px;"/>
             <div id="submitButton" class="button">Submit</div>
         </div>
     </div>
@@ -29,25 +30,13 @@
         <h3 id="or">OR</h3>
     </div>
 
-    <div id="banner">To vote, go to <a>bit.ly/join</a> and enter <b>2345</b></div>
+    <div id="banner">To vote, go to <a>battledecks.herokuapp.com</a> and enter <b>2345</b></div>
 
     <div id="contestantsScreen">
         <div class="wrapper">
             <h1 id="contestantsLabel">Contestants</h1>
             <div id="contestantsContainer" class="container">
-                <p class="chip orange">John Doe</p>
-                <p class="chip orange">John Doe</p>
-                <p class="chip orange">John Doe</p>
-                <p class="chip orange">John Doe</p>
-                <p class="chip orange">John Doe</p>
-                <p class="chip orange">John Doe</p>
-                <p class="chip orange">John Doe</p>
-                <p class="chip orange">John Doe</p>
-                <p class="chip orange">John Doe</p>
-                <p class="chip orange">John Doe</p>
-                <p class="chip orange">John Doe</p>
-                <p class="chip orange">John Doe</p>
-                <p class="chip orange">John Doe</p>
+                
             </div>
         </div>
         <div id="startButton" class="button">Start</div>
@@ -58,13 +47,13 @@
             <h1 id="roundLabel">Round 1</h1>
             <div id="roundDetailsContainer" class="container">
                 <h2 id="contestantLabel">Contestant:</h2>
-                <p class="chip orange">John Doe</p>
+                <p class="chip orange" id="contestantName">John Doe</p>
                 <br />
                 <h2 id="topicLabel">Topic:</h2>
-                <p class="chip green">Other Topic</p>
+                <p class="chip green" id="roundTopic"></p>
                 <br />
                 <h2 id="slidesLabel">Slides:</h2>
-                <p class="chip red">15</p>
+                <p class="chip red" id="slidesCount"></p>
             </div>
         </div>
         <div id="startButton" class="button">Start</div>
@@ -83,8 +72,10 @@
                 <h3 id="or">OR</h3>
             </div>
         </div>
-        <div id="timeButton" class="button">15s</div>
+        <div id="timeButton" class="button">30s</div>
     </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./scripts/main.js"></script>
 </body>
 
 </html>
