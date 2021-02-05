@@ -1,4 +1,4 @@
-var socket = io('https://battledecks.herokuapp.com', { 'forceNew': true }),
+var socket = io('http://battledecks.herokuapp.com', { 'forceNew': true }),
     hostscreen = false;
 
 socket.on('hi', data => {
