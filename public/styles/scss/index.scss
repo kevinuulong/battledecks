@@ -9,7 +9,7 @@ html, body {
     font-family: 'Montserrat', sans-serif;
 }
 
-#loginScreen, #voteScreen, #contestantsScreen, #roundScreen, #banner {
+#loginScreen, #voteScreen, #contestantsScreen, #roundScreen, #banner, #topicScreen {
     display: none;
 }
 
@@ -135,16 +135,32 @@ html, body {
     z-index: 99;
 }
 
+// Temporarily hidden
 #contestantsScreen {
-    display: block;
-    position: absolute;
+    // display: flex;
+    position: relative;
     top: 0;
     width: calc(100% - 200px);
     height: calc(100% - 200px);
     padding: 100px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 
     h1 {
-        
+        width: 100%;
+    }
+
+    .wrapper {
+        width: 70%;
+        height: 70%;
+        transform: translateY(-50px);
+    }
+
+    .button {
+        position: absolute;
+        bottom: 10%;
+        right: calc(20% + 5px);
     }
 }
 
@@ -154,10 +170,160 @@ html, body {
     padding-right: 15px;
     padding-left: 15px;
     border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-right: 10px;
 }
 
 #contestantsContainer {
-    width: 60%;
-    height: 60%;
+    width: 100%;
+    height: 100%;
     background-color: #212121;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+// Temporarily hidden
+#roundScreen {
+    // display: flex;
+    position: relative;
+    top: 0;
+    width: calc(100% - 200px);
+    height: calc(100% - 200px);
+    padding: 100px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    h1 {
+        width: 100%;
+    }
+
+    .wrapper {
+        width: 70%;
+        height: 70%;
+        transform: translateY(-50px);
+    }
+
+    .button {
+        position: absolute;
+        bottom: 10%;
+        right: calc(20% + 5px);
+    }
+}
+
+#roundDetailsContainer {
+    width: 100%;
+    height: 100%;
+    background-color: #212121;
+    padding: 30px;
+    box-sizing: border-box;
+
+    p, h2 {
+        display: inline-block;
+    }
+
+    h2 {
+        margin-right: 15px;
+    }
+}
+
+.red {
+    background-color: #EB5757;
+}
+
+
+// Temporarily hidden
+#topicScreen {
+    // display: flex;
+    position: relative;
+    top: 0;
+    width: calc(100% - 200px);
+    height: calc(100% - 200px);
+    padding: 100px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    h1 {
+        width: 100%;
+    }
+
+    .wrapper {
+        width: 70%;
+        height: 70%;
+        transform: translateY(-50px);
+    }
+
+    .button {
+        position: absolute;
+        bottom: 10%;
+        right: calc(20% + 5px);
+    }
+
+    #topicsContainer {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: #212121;
+        box-sizing: border-box;
+    
+            .voteButton {
+                width: 50%;
+                height: 100%;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        
+            #right {
+                right: 0;
+                top: 0;
+            }
+
+            #left {
+                left: 0;
+                top: 0;
+                bottom: 0;
+            }
+
+            #left:after {
+                content: "";
+                background: #212121;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 75%;
+                height: 20px;
+            }
+
+            #right:after {
+                content: "";
+                background: #212121;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 25%;
+                height: 20px;
+            }
+
+            h1 {
+                width: 100%;
+                text-align: center;
+            }
+
+            #or {
+                position: absolute;
+                top: calc(50% - 25px);
+                left: calc(50% - 25px);
+                margin: 0;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                background-color: #212121;
+           }
+
+    }
 }
