@@ -172,7 +172,7 @@ window.onload = () => {
     })
 
     document.querySelector("#roundScreen #startButton").addEventListener('click', ()=> {
-        document.querySelector("#roundDetails").style.display = "none";
+        document.querySelector("#roundScreen").style.display = "none";
         document.querySelector("#contestantsScreen").style.display = "flex"
     })
 }
