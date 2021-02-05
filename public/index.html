@@ -6,13 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Battle Decks</title>
+    <link rel="stylesheet" href="./styles/css/index.css">
 </head>
 
 <body>
     <div id="loginScreen">
-        <img id="logo" src="">
-        <h1>Enter your room code below!</h1>
-        <input id="roomCode" type="text" />
+        <div>
+            <img id="logo" src="">
+            <h1>Enter your room code below!</h1>
+            <input id="roomCode" type="text" placeholder="Enter your room code here..." />
+            <div id="submitButton" class="button">Submit</div>
+        </div>
     </div>
 
     <div id="voteScreen">
@@ -41,9 +45,12 @@
     <div id="roundScreen">
         <h1 id="roundLabel">Contestants</h1>
         <div id="roundDetailsContainer" class="container">
-            <h2 id="contestantLabel">Contestant:</h2> <p class="chip orange">John Doe</p>
-            <h2 id="topicLabel">Topic:</h2> <p class="chip orange">Other Topic</p>
-            <h2 id="slidesLabel">Slides:</h2> <p class="chip orange">15</p>
+            <h2 id="contestantLabel">Contestant:</h2>
+            <p class="chip orange">John Doe</p>
+            <h2 id="topicLabel">Topic:</h2>
+            <p class="chip orange">Other Topic</p>
+            <h2 id="slidesLabel">Slides:</h2>
+            <p class="chip orange">15</p>
         </div>
         <div id="startButton" class="button">Start</div>
     </div>

@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+html, body {
+    background-color: #141414;
+    color: white;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#loginScreen, #voteScreen, #contestantsScreen, #roundScreen, #banner {
+    display: none;
+}
+
+// Temporarily Show Screen
+#loginScreen {
+    // display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    div :not(.button){
+        width: 300px;
+    }
+
+    input {
+        width: 300px;
+        height: 40px;
+        padding: 5px;
+        background-color: #212121;
+        border: none;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+
+    input::placeholder {
+        font-family: 'Montserrat', sans-serif;
+    }
+    h1 {
+        margin: 0;
+    }
+
+    .button {
+        // TODO: Change to be on the right
+        margin: auto;
+    }
+}
+
+.button {
+    background-color: #9B51E0;
+    font-weight: 600;
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+// Temporarily Hidden
+#voteScreen {
+    // display: block;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+
+   @media (orientation:landscape) {
+    .voteButton {
+        width: 50%;
+        height: 100%;
+        position: absolute;
+    }
+
+    #right {
+        right: 0;
+        top: 0;
+    }
+   }
+   @media (orientation:portrait) {
+    .voteButton {
+        width: 100%;
+        height: 50%;
+
+    }
+
+   }
+   .voteButton {
+       display: flex;
+       box-sizing: border-box;
+       align-items: center;
+       justify-content: center;
+       cursor: pointer;
+
+       h1 {
+           width: 300px;
+           text-align: center;
+       }
+   }
+
+   #or {
+        position: absolute;
+        top: calc(50% - 25px);
+        left: calc(50% - 25px);
+        margin: 0;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background-color: #212121;
+   }
+}
+
+
+.orange {
+    background-color: #F2994A;
+}
+
+.green {
+    background-color: #27AE60;
+}
+
+#banner {
+    background-color: #9B51E0;
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 30px;
+    top: 0;
+    z-index: 99;
+}
+
+#contestantsScreen {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: calc(100% - 200px);
+    height: calc(100% - 200px);
+    padding: 100px;
+
+    h1 {
+        
+    }
+}
+
+.chip {
+    width: fit-content;
+    padding: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 20px;
+}
+
+#contestantsContainer {
+    width: 60%;
+    height: 60%;
+    background-color: #212121;
+}
