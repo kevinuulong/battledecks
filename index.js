@@ -107,16 +107,20 @@ io.on('connection', socket => {
     })
 
     socket.on('timesUp', data => {
+        randUsers = randomNoRepeats(users);
         console.log("howdy")
         io.to(data.roomCode).emit('roundDetails', {
-            username: users.splice(Math.floor(Math.random()*users.length), 1)
+            username: users()
         })
     })
 
 
 });
 
-var topics = ["turtles", "alligators", "poems", "crabs", "desks", "office chairs", "butterflies", "doors", "windows", "mice", "cars", "cards", "carpets", "GIF's", "erasers", "tissues", "cats", "graphs", "walls", "bricks", "TV's", "phones", "laptops"];
+var topics = ["turtles", "alligators", "poems", "crabs", "desks", "office chairs", "butterflies", "doors", "windows", "mice", "cars", "cards", "carpets", "GIF's", "erasers", "tissues", "cats", "graphs", "walls", "bricks", "TV's", "phones", "laptops", "cake", "towels", "plates", "paintings", "cookies", "laptops", "horses", "windows", "coffee", "apples", "oranges", "brownies", "dancing", "songs", "pens", "pencils", "carwash", "pyramid", "statues", "sprinkles", "facebook", "instagram", "snapchat", "twitter", "google", "billion", "mac and cheese", "fancy cars", "lampshades"];
+
+var randUsers;
+var copyOfUsers;
 
 var currentChoices = [];
 var votes = [];
