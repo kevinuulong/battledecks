@@ -110,7 +110,7 @@ io.on('connection', socket => {
         randUsers = randomNoRepeats(users);
         console.log("howdy")
         io.to(data.roomCode).emit('roundDetails', {
-            username: users()
+            username: randUsers()
         })
     })
 
