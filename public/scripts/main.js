@@ -98,7 +98,7 @@ window.onload = () => {
             console.log(time);
             if (time > 0) {
                 time--;
-                document.querySelector("#timeButton").innerHTML = time+'s';
+                document.querySelector("#timeButton").innerHTML = time + 's';
             }
             else clearInterval(timer);
         }, 1000)
@@ -161,7 +161,7 @@ window.onload = () => {
         document.querySelector("#contestantName").innerHTML = data.username;
         // document.querySelector("#roundTopic").innerHTML = ;
         var topic;
-        if (total[0]>total[1]) {
+        if (total[0] > total[1]) {
             topic = document.querySelector("#left > .voteButtonLabel").innerHTML;
         } else {
             topic = document.querySelector("#right > .voteButtonLabel").innerHTML;
@@ -171,12 +171,15 @@ window.onload = () => {
         document.querySelector("#slidesCount").innerHTML = Math.floor(Math.random() * 5) + 10;
     })
 
-    document.querySelector("#roundScreen #startButton").addEventListener('click', ()=> {
+    document.querySelector("#roundScreen #startButton").addEventListener('click', () => {
         document.querySelector("#roundScreen").style.display = "none";
         document.querySelector("#contestantsScreen").style.display = "flex"
     })
 
     document.querySelector("#roomCodeDisplay").innerHTML = id;
+    document.querySelector("#roomCodeDisplay").addEventListener('click', () => {
+        socket.emit('clearUsers');
+    })
 }
 
 var total = [];

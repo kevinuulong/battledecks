@@ -114,6 +114,11 @@ io.on('connection', socket => {
         })
     })
 
+    socket.on('clearUsers', () => {
+        randUsers = "";
+        users = [];
+    })
+
 
 });
 
