@@ -175,6 +175,8 @@ window.onload = () => {
         document.querySelector("#roundScreen").style.display = "none";
         document.querySelector("#contestantsScreen").style.display = "flex"
     })
+
+    document.querySelector("#roomCodeDisplay").innerHTML = id;
 }
 
 var total = [];
